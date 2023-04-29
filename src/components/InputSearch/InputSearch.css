@@ -1,0 +1,30 @@
+
+.container_input{
+    display: flex;
+    background-color: rgb(78, 73, 73);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+.container_input input, .button_search{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.container_input input{
+    margin-right: .8rem;
+}
+
+
+.container_input input::placeholder{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.button_search{
+    font-size: 1.4rem;
+    cursor: pointer;
+}

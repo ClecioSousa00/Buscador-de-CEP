@@ -1,16 +1,18 @@
-import InputSearch from './components/InputSearch'
-import ResultCep from './components/ResultCep'
 
-function App() {
+import { Container } from './components/Container'
+import {InputSearch} from './components/InputSearch'
+import {ResultCep} from './components/ResultCep'
+
+
+export const App = () =>{
   return (
     <>
-      <main className='main_container'>
-        <h1 className='title'>Buscador de CEP</h1>
+      <Container>
         <InputSearch/>
         <ResultCep/>
-      </main>
+      </Container>
     </>
   )
 }
 
-export default App
+

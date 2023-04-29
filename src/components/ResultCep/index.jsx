@@ -1,5 +1,6 @@
+import './ResultCep.css'
 
-export default function ResultCep(){
+export const ResultCep = () =>{
     return(
         <div className="container_result">
             <h2 className="title_result">Cep: 000111222</h2>
