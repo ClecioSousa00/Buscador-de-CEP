@@ -1,13 +1,18 @@
 import './ResultCep.css'
 
-export const ResultCep = () =>{
+export const ResultCep = ({cep}) =>{
+
+    if( typeof cep == 'string'){
+        return <p className='text_result'>{cep}</p>
+    }
+
     return(
         <div className="container_result">
-            <h2 className="title_result">Cep: 000111222</h2>
-            <span>alguma rua</span>
-            <span>algum complemento</span>
-            <span>algum bairro</span>
-            <span>alguma cidade</span>
+            <h2 className="title_result">Cep: {cep.cep}</h2>
+            <span>Logradouro: {cep.logradouro}</span>
+            <span>Bairro: {cep.bairro}</span>
+            <span>{cep.localidade} - {cep.uf}</span>
+            
         </div>
     )
 }
