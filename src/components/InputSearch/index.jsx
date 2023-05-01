@@ -11,7 +11,7 @@ export const InputSearch = ({handleSearch}) =>{
         <div className="container_input">
             <input value={input} 
                 type="text" 
-                placeholder="Digite se CEP"
+                placeholder="Digite seu CEP"
                 onChange={event => setInput(event.target.value)} />
             
             <button onClick={() => handleSearch(input)}  className="button_search"> <FaSearch/> </button>

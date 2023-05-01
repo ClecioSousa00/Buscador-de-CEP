@@ -9,10 +9,9 @@ export const ResultCep = ({cep}) =>{
     return(
         <div className="container_result">
             <h2 className="title_result">Cep: {cep.cep}</h2>
-            <span>Logradouro: {cep.logradouro}</span>
-            <span>Bairro: {cep.bairro}</span>
+            <span>Logradouro: {cep.logradouro ? cep.logradouro : 'Este Cep não possui Logradouro'}</span>
+            <span>Bairro: {cep.bairro ? cep.logradouro : 'Este Cep não possui Bairro'}</span>
             <span>{cep.localidade} - {cep.uf}</span>
-            
         </div>
     )
 }

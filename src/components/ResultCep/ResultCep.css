@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30rem;
+    width: 32rem;
     background-color: #ddd8d8;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -15,13 +15,10 @@
     color: #fff;
 }
 
-
 .title_result{
     font-size: 2.6rem;
     margin: 1.5rem 0;
 }
-
-
 
 .container_result span{
     font-size: 1.4rem;

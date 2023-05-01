@@ -12,15 +12,16 @@ export const App = () => {
   const [loading, setLoading] = useState(false)
 
   const handleSearch = async (input) => {
-    setCep('')
     setLoading(true)
+   
     try {
       const response = await axios.get(`https://viacep.com.br/ws/${input}/json/`)
       setCep(response.data)
     } catch {
       setCep('O CEP informado não foi encontrado')
     }
-    setLoading(false)
+    // setLoading(false)
+    setTimeout(() => {setLoading(false)},400)
   }
 
 
@@ -28,8 +29,9 @@ export const App = () => {
     <>
       <Container>
         <InputSearch handleSearch={handleSearch} />
-        {loading && <Loader/>}
-        {cep && <ResultCep cep={cep} />}
+        {/* {loading && <Loader/>}
+        {cep && <ResultCep cep={cep} />} */}
+        {loading ? <Loader/> : cep && <ResultCep cep={cep} />}
       </Container>
     </>
   )
