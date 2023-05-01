@@ -7,8 +7,6 @@ export const InputSearch = ({handleSearch}) =>{
 
     const [input, setInput] = useState('')
     
-
-  
     return(
         <div className="container_input">
             <input value={input} 
@@ -17,7 +15,6 @@ export const InputSearch = ({handleSearch}) =>{
                 onChange={event => setInput(event.target.value)} />
             
             <button onClick={() => handleSearch(input)}  className="button_search"> <FaSearch/> </button>
-            
         </div>
     )
 }
