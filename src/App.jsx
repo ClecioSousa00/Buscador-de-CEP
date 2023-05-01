@@ -1,10 +1,12 @@
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+// import axios from 'axios';
+
 import { Container } from './components/Container'
 import { InputSearch } from './components/InputSearch'
 import { ResultCep } from './components/ResultCep'
-import axios from 'axios';
 import { Loader } from './components/Loader';
+import { axiosInstance } from './helper/axios-instance';
 
 export const App = () => {
 
@@ -13,9 +15,9 @@ export const App = () => {
 
   const handleSearch = async (input) => {
     setLoading(true)
-   
     try {
-      const response = await axios.get(`https://viacep.com.br/ws/${input}/json/`)
+      const response = await axiosInstance.get(`${input}/json`)
+      // const response = await axios.get(`https://viacep.com.br/ws/${input}/json/`)
       setCep(response.data)
     } catch {
       setCep('O CEP informado não foi encontrado')
