@@ -6,7 +6,7 @@ import { InputSearch } from './components/InputSearch'
 import { ResultCep } from './components/ResultCep'
 import { Loader } from './components/Loader';
 
-import { axiosInstance } from './helper/axios-instance';
+import { axiosInstance } from './services/axios-instance';
 
 export const App = () => {
 
