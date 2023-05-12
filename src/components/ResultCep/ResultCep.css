@@ -10,9 +10,11 @@
 }
 
 .text_result{
-    font-size: 1.8rem;
-    margin: 1.5rem 0;
-    color: #fff;
+    font-size: 1.6rem;
+    margin: .5rem 0;
+    padding: .5rem;
+    color: #d63939;
+    text-align: center;
 }
 
 .title_result{
